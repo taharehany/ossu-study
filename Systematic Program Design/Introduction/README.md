@@ -29,6 +29,8 @@ The design method helps clarify the problem and break it into manageable parts.
 - Makes the final program easier to read, maintain, and expand.  
 - Encourages good programming habits from the start.
 
+<br>
+
 - يساعد في تحديد وظيفة البرنامج بدقة.  
 - يقسم البرنامج إلى أجزاء منطقية وسهلة الاختبار.  
 - يجعل البرنامج النهائي سهل القراءة والتعديل والتوسيع.  
@@ -43,6 +45,8 @@ The design method helps clarify the problem and break it into manageable parts.
 - Students are encouraged to type along and solve the problems in real time.  
 - Practice problems and a quiz follow each module.
 
+<br>
+
 - كل وحدة تحتوي على محاضرات موسعة تركز على حل مشكلة تصميم خطوة بخطوة.  
 - تحتوي المحاضرات على أسئلة لاختبار الفهم.  
 - يُشجَّع الطلاب على كتابة الكود وحل المشكلات بالتزامن مع المحاضرة.  
@@ -55,6 +59,8 @@ The design method helps clarify the problem and break it into manageable parts.
 Just like sports or music, programming is best learned by doing.  
 Watching isn't enough—you need to actively practice and solve problems yourself.
 
+<br>
+
 تمامًا مثل الرياضة أو العزف، أفضل طريقة لتعلم البرمجة هي التطبيق العملي.  
 المشاهدة وحدها لا تكفي—يجب أن تمارس وتحل المشكلات بنفسك.
 
@@ -64,6 +70,8 @@ Watching isn't enough—you need to actively practice and solve problems yoursel
 
 The course uses BSL (Beginning Student Language), a simple language that includes core features of many real-world languages.  
 Using BSL helps focus on learning the design method, not the syntax of a specific industry language.
+
+<br>
 
 يستخدم الكورس لغة BSL (لغة الطالب المبتدئ)، وهي لغة بسيطة تحتوي على الخصائص الأساسية للغات البرمجة المختلفة.  
 يتيح استخدام BSL التركيز على منهج التصميم بدلًا من الانشغال بصياغة لغة معينة.

@@ -69,14 +69,6 @@ Before building complex programs like games or web apps, we must learn the basic
   * **Definitions Area** (top): where you write code.
   * **Interaction Area** (bottom): where results appear after running.
 
-<br>
-
-* عند فتح DrRacket، تأكد إن اللغة المحددة هي BSL. لو مش موجودة، اخترها من `Language > Choose Language` تحت قسم `How to Design Programs`.
-* البرنامج فيه منطقتين:
-
-  * **منطقة التعريفات** (أعلى): لكتابة الكود.
-  * **منطقة التفاعل** (أسفل): لعرض النتائج.
-
 ---
 
 #### Writing Expressions
@@ -96,23 +88,6 @@ Rules:
 * Then comes the operator: `+`, `-`, `*`, `/`.
 * Followed by one or more operands (numbers or other expressions).
 * Ends with a closing parenthesis `)`.
-
-<br>
-في BSL، التعبيرات الحسابية تتبع الصيغة:
-
-```scheme
-(+ 3 4) ;; جمع 3 و 4
-(* 2 3) ;; ضرب 2 في 3
-(+ 3 (* 2 3)) ;; تعبير متداخل، الناتج 9
-(/ 12 (* 2 3)) ;; قسمة 12 على 6، الناتج 2
-```
-
-القواعد:
-
-* تبدأ التعبيرات بـ `(`
-* بعدها العامل `+` أو `*` أو غيره
-* ثم المعاملات (أرقام أو تعبيرات أخرى)
-* وتنتهي بـ `)`
 
 ---
 
@@ -146,21 +121,12 @@ Examples:
 
 * `sqr`: تربيع الرقم
 * `sqrt`: الجذر التربيعي
-
-أمثلة:
-
-```scheme
-(sqr 3)    ;; الناتج 9
-(sqrt 16)  ;; الناتج 4
-```
-
 ---
 
 #### Practice Exercise
 
 Try writing some expressions in DrRacket using the primitives you've learned. Test them using the "Run" button and observe the results in the Interaction Area.
 
-<br>
 جرب تكتب تعبيرات بنفسك في DrRacket باستخدام العمليات اللي اتعلمتها. اضغط "Run" وشوف النتائج في منطقة التفاعل.
 
 ---
@@ -170,8 +136,6 @@ Try writing some expressions in DrRacket using the primitives you've learned. Te
 #### Why Evaluation Rules Matter
 
 Even simple expressions like `(+ 1 2)` follow specific rules during evaluation. While that may seem excessive, it becomes essential when dealing with large, real-world programs like those with millions of lines of code. Understanding the evaluation rules helps us reason about and debug complex programs effectively.
-
-<br>
 
 حتى التعبيرات البسيطة مثل `(+ 1 2)` تتبع قواعد محددة أثناء التقييم. رغم إن ده ممكن يبدو مبالغ فيه، لكنه ضروري لما نتعامل مع برامج ضخمة. فهم القواعد دي بيساعدنا نفهم ونحل مشاكل البرامج المعقدة.
 
@@ -220,19 +184,6 @@ So the entire expression evaluates to `15`.
 
 عملية التقييم بتتبع قاعدة: **كل المعاملات لازم تتقيم (تتحول لقيم) قبل تنفيذ العملية**.
 
-مثال:
-
-```scheme
-(+ 3 (* 3 4) (- (+ 1 2) 3))
-```
-
-خطوة بخطوة:
-
-1. `(* 3 4)` → `12`
-2. `(+ 1 2)` → `3`
-3. `(- 3 3)` → `0`
-4. `(+ 3 12 0)` → `15`
-
 ---
 
 #### Evaluation Order Intuition
@@ -275,7 +226,7 @@ We only need a few evaluation rules in BSL to handle complex programs. This simp
 
 In addition to numbers, BSL supports other primitive data types like **strings** and **images**. These allow us to represent words, names, and pictures, expanding what we can build.
 
-**بالعربي:**
+<br>
 بالإضافة للأرقام، لغة BSL تدعم أنواع بيانات أولية تانية زي **السلاسل النصية (Strings)** و**الصور (Images)**. الأنواع دي بتسمح لينا نمثل كلمات وأسماء وصور، وده بيوسع قدراتنا في البرمجة.
 
 ---
@@ -297,22 +248,11 @@ In addition to numbers, BSL supports other primitive data types like **strings**
 (string-append "Ada" " " "Lovelace") ;; returns "Ada Lovelace"
 ```
 
-**بالعربي:**
+<br>
 
 * السلسلة النصية (String) هي أي مجموعة حروف بين علامتي اقتباس مزدوجة:
-
-```scheme
-"apple"
-"Ada"
-```
-
 * السلاسل النصية قيم بحد ذاتها.
 * نقدر نستخدم `string-append` لدمج سلاسل نصية:
-
-```scheme
-(string-append "Ada" " " "Lovelace") ;; الناتج "Ada Lovelace"
-```
-
 ---
 
 #### Strings vs Numbers
@@ -370,12 +310,8 @@ Explanation:
 
 Line it up with the actual string to visually see character positions.
 
-**بالعربي:**
-غالبًا المبتدئين بيغلطوا في تحديد الحروف بسبب الترقيم من الصفر. عشان تتجنب الخطأ، ممكن تكتب سلسلة زي:
-
-```scheme
-"0123456"
-```
+<br>
+غالبًا المبتدئين بيغلطوا في تحديد الحروف بسبب الترقيم من الصفر. عشان تتجنب الخطأ، ممكن تكتب سلسلة
 
 وحطها تحت السلسلة الأصلية عشان تشوف أماكن الحروف.
 
@@ -385,7 +321,7 @@ Line it up with the actual string to visually see character positions.
 
 Making mistakes like mixing strings and numbers is normal. Racket provides error messages that show where the issue is. Use them to fix your code.
 
-**بالعربي:**
+<br>
 الخطأ جزء طبيعي من البرمجة، خصوصًا أثناء التعلم. Racket بيعرض رسالة الخطأ ويوضح مكانها، فاستفد منها لتصحيح الكود.
 
 ---

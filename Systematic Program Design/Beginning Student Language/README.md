@@ -332,12 +332,6 @@ In BSL, strings are sequences of characters enclosed in double quotes:
 
 These are values, just like numbers. When run, they return themselves.
 
-<br>
-في BSL، السلاسل النصية (Strings) هي مجموعة من الحروف بين علامتي تنصيص مزدوجتين:
-
-```scheme
-"apple"
-"Ada"
 ```
 
 دي قيم زيها زي الأرقام. لما بتشغلها، بترجع نفسها.

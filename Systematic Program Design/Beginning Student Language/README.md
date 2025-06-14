@@ -267,3 +267,125 @@ We only need a few evaluation rules in BSL to handle complex programs. This simp
 * الترتيب: **من اليسار لليمين** و **من الداخل للخارج**.
 
 بس شوية قواعد بسيطة كفاية عشان نبرمج برامج معقدة، وده بيسمح لينا نركز أكتر على **تصميم البرنامج** نفسه.
+
+
+## Strings and Images in BSL
+
+#### Introducing New Data Types
+
+In addition to numbers, BSL supports other primitive data types like **strings** and **images**. These allow us to represent words, names, and pictures, expanding what we can build.
+
+**بالعربي:**
+بالإضافة للأرقام، لغة BSL تدعم أنواع بيانات أولية تانية زي **السلاسل النصية (Strings)** و**الصور (Images)**. الأنواع دي بتسمح لينا نمثل كلمات وأسماء وصور، وده بيوسع قدراتنا في البرمجة.
+
+---
+
+#### Strings in BSL
+
+* A string is any sequence of characters wrapped in double quotes, like:
+
+```scheme
+"apple"
+"Ada"
+```
+
+* Strings are **values** — running the expression returns the string itself.
+
+* We can use `string-append` to combine multiple strings:
+
+```scheme
+(string-append "Ada" " " "Lovelace") ;; returns "Ada Lovelace"
+```
+
+**بالعربي:**
+
+* السلسلة النصية (String) هي أي مجموعة حروف بين علامتي اقتباس مزدوجة:
+
+```scheme
+"apple"
+"Ada"
+```
+
+* السلاسل النصية قيم بحد ذاتها.
+* نقدر نستخدم `string-append` لدمج سلاسل نصية:
+
+```scheme
+(string-append "Ada" " " "Lovelace") ;; الناتج "Ada Lovelace"
+```
+
+---
+
+#### Strings vs Numbers
+
+Even if a string contains digits, it’s still not a number:
+
+```scheme
+"123" ;; a string
+123   ;; a number
+```
+
+* You can add numbers:
+
+```scheme
+(+ 123 1) ;; returns 124
+```
+
+* But adding strings with numbers causes an error:
+
+```scheme
+(+ "123" 1) ;; ERROR
+```
+
+---
+
+#### String Operations
+
+* **string-length**: Returns number of characters in a string.
+
+```scheme
+(string-length "apple") ;; returns 5
+```
+
+* **substring**: Extracts part of a string using **zero-based indexing**.
+
+```scheme
+(substring "caribou" 2 4) ;; returns "ri"
+```
+
+Explanation:
+
+* Indexing starts at 0.
+* So index 2 = third character, and we stop **before** index 4.
+
+---
+
+#### Common Mistake: Off-by-One Errors
+
+* Because of zero-based indexing, beginners often include or skip a wrong character.
+* To avoid mistakes, try writing out a helper string like:
+
+```scheme
+"0123456"
+```
+
+Line it up with the actual string to visually see character positions.
+
+**بالعربي:**
+غالبًا المبتدئين بيغلطوا في تحديد الحروف بسبب الترقيم من الصفر. عشان تتجنب الخطأ، ممكن تكتب سلسلة زي:
+
+```scheme
+"0123456"
+```
+
+وحطها تحت السلسلة الأصلية عشان تشوف أماكن الحروف.
+
+---
+
+#### Dealing with Errors
+
+Making mistakes like mixing strings and numbers is normal. Racket provides error messages that show where the issue is. Use them to fix your code.
+
+**بالعربي:**
+الخطأ جزء طبيعي من البرمجة، خصوصًا أثناء التعلم. Racket بيعرض رسالة الخطأ ويوضح مكانها، فاستفد منها لتصحيح الكود.
+
+---

@@ -525,7 +525,43 @@ This defines:
 
 ---
 
-## Summary
+#### How to Define Constants
+
+Use the `define` form:
+
+```racket
+(define CONSTANT-NAME value)
+```
+
+Example:
+
+```racket
+(define WIDTH 400)
+(define HEIGHT 600)
+(* WIDTH HEIGHT) ; => 240000
+```
+
+#### Rules and Naming
+
+* Constant names are typically in UPPERCASE.
+* Names can include letters, digits, `!`, `?`, `=`, etc.
+* Cannot contain parentheses or quotes.
+
+#### Example with Images
+
+You can define a constant that stores an image value:
+
+```racket
+(define CAT (image "🐱")) ; using pasted image from editor
+(define RCAT (rotate -10 CAT))
+(define LCAT (rotate 10 CAT))
+```
+
+#### Final Note
+
+Once defined, a constant's value cannot be changed. Attempting to redefine it will result in an error.
+
+بمجرد تعريف الثابت، لا يمكن تغييره. إذا حاولت تعريفه مرة أخرى بنفس الاسم، سيظهر خطأ.
 
 Constant definitions let us name values once and reuse them throughout the program. This improves clarity and maintainability.
 

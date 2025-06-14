@@ -123,14 +123,6 @@ Examples:
 * `sqrt`: الجذر التربيعي
 ---
 
-#### Practice Exercise
-
-Try writing some expressions in DrRacket using the primitives you've learned. Test them using the "Run" button and observe the results in the Interaction Area.
-
-جرب تكتب تعبيرات بنفسك في DrRacket باستخدام العمليات اللي اتعلمتها. اضغط "Run" وشوف النتائج في منطقة التفاعل.
-
----
-
 ## Evaluation Rules in BSL
 
 #### Why Evaluation Rules Matter
@@ -324,4 +316,135 @@ Making mistakes like mixing strings and numbers is normal. Racket provides error
 <br>
 الخطأ جزء طبيعي من البرمجة، خصوصًا أثناء التعلم. Racket بيعرض رسالة الخطأ ويوضح مكانها، فاستفد منها لتصحيح الكود.
 
+---
+
+
+## Strings and Images in BSL
+
+#### String Basics
+
+In BSL, strings are sequences of characters enclosed in double quotes:
+
+```scheme
+"apple"
+"Ada"
+```
+
+These are values, just like numbers. When run, they return themselves.
+
+<br>
+في BSL، السلاسل النصية (Strings) هي مجموعة من الحروف بين علامتي تنصيص مزدوجتين:
+
+```scheme
+"apple"
+"Ada"
+```
+
+دي قيم زيها زي الأرقام. لما بتشغلها، بترجع نفسها.
+
+---
+
+#### String Operations
+
+You can concatenate strings using `string-append`:
+
+```scheme
+(string-append "Ada" " " "Lovelace") ;; => "Ada Lovelace"
+```
+
+Note:
+
+* Strings that contain digits (e.g., "123") are still strings, not numbers.
+* You can't perform arithmetic on them unless converted.
+
+```scheme
+(+ 123 1) ;; => 124
+(+ "123" 1) ;; Error: string used where number expected
+```
+
+<br>
+
+تقدر تربط سلاسل نصية مع بعض باستخدام `string-append`:
+
+```scheme
+(string-append "Ada" " " "Lovelace") ;; الناتج "Ada Lovelace"
+```
+
+ملاحظات:
+
+* السلاسل اللي فيها أرقام (زي "123") تفضل Strings مش أرقام.
+* مينفعش تعمل عليهم عمليات حسابية.
+
+---
+
+#### String Utilities
+
+* `string-length`: returns the number of characters in the string.
+* `substring`: extracts part of a string based on **zero-based indexing**.
+
+Example:
+
+```scheme
+(string-length "apple") ;; => 5
+(substring "caribou" 2 4) ;; => "ri"
+(substring "caribou" 0 3) ;; => "car"
+```
+
+<br>
+
+* `string-length`: بيرجع عدد الحروف.
+* `substring`: بيطلع جزء من السلسلة حسب الترقيم اللي بيبدأ من صفر.
+
+مثال:
+
+```scheme
+(string-length "apple") ;; الناتج 5
+(substring "caribou" 2 4) ;; الناتج "ri"
+(substring "caribou" 0 3) ;; الناتج "car"
+```
+
+---
+
+#### Image Basics
+
+To use image functions, start your file with:
+
+```scheme
+(require 2htdp/image)
+```
+
+Common primitives to create images:
+
+```scheme
+(circle 30 "solid" "red")
+(rectangle 50 100 "outline" "blue")
+(text "Hello" 24 "orange")
+```
+
+---
+
+#### Image Combinations
+
+Use the following functions to combine images:
+
+* `above`: stack images vertically.
+* `beside`: place images side by side.
+* `overlay`: place images on top of each other.
+
+Example:
+
+```scheme
+(above
+ (circle 10 "solid" "red")
+ (circle 20 "solid" "green")
+ (circle 30 "solid" "blue"))
+```
+
+<br>
+
+الدمج بين الصور:
+
+* `above`: يرص الصور فوق بعض.
+* `beside`: يحط الصور جنب بعض.
+* `overlay`: يحط الصور فوق بعض في نفس المكان.
 ---

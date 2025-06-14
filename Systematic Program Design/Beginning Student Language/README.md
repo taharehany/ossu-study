@@ -448,3 +448,85 @@ Example:
 * `beside`: يحط الصور جنب بعض.
 * `overlay`: يحط الصور فوق بعض في نفس المكان.
 ---
+
+
+## Constant Definitions in BSL
+
+#### Introduction
+
+In previous lessons, we learned how to use different types of values—numbers, strings, and images—and how to write expressions to manipulate them.
+
+**بالعربي:**
+في الدروس السابقة تعلمنا كيفية استخدام أنواع مختلفة من القيم مثل الأرقام والسلاسل النصية والصور، وكيفية كتابة تعبيرات لمعالجتها.
+
+---
+
+## Why Use Constant Definitions?
+
+Constants give names to values, making code easier to read and change. These two features—**readability** and **changeability**—are among the most important traits of good code.
+
+**بالعربي:**
+الثوابت تمنح القيم أسماء، مما يجعل الكود أسهل في القراءة والتعديل. وهذان العاملان (قابلية القراءة وقابلية التعديل) من أهم خصائص الكود الجيد.
+
+---
+
+## Syntax of Constant Definition
+
+```racket
+(define WIDTH 400)
+(define HEIGHT 600)
+```
+
+Constants do not immediately produce output but can be used in expressions. For example:
+
+```racket
+(* WIDTH HEIGHT)
+```
+
+This will evaluate to:
+
+* First step: `WIDTH` → `400`
+* Second step: `HEIGHT` → `600`
+* Final result: `(* 400 600)` → `240000`
+
+**بالعربي:**
+الثوابت لا تنتج ناتجًا مباشرة، ولكن يمكن استخدامها داخل تعبيرات.
+
+---
+
+## Rules for Defining Constants
+
+* Use `(define NAME value)` format.
+* Names can contain letters, digits, and certain symbols like `!`, `?`, `=`.
+* Cannot contain parentheses `(` `)` or quotes `"`.
+* A constant can only be defined once. Attempting to redefine it causes an error.
+
+---
+
+## Example with Images
+
+You can define constants for images:
+
+```racket
+(define CAT <inserted cat image>)
+```
+
+Then use expressions like:
+
+```racket
+(define RCAT (rotate -10 CAT))
+(define LCAT (rotate 10 CAT))
+```
+
+This defines:
+
+* `RCAT`: the cat rotated right
+* `LCAT`: the cat rotated left
+
+---
+
+## Summary
+
+Constant definitions let us name values once and reuse them throughout the program. This improves clarity and maintainability.
+
+تعريف الثوابت يسمح لنا بتسمية القيم مرة واحدة وإعادة استخدامها في أجزاء متعددة من البرنامج، مما يحسّن الوضوح وسهولة التعديل.

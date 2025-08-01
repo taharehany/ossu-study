@@ -450,7 +450,6 @@ Example:
 
 In previous lessons, we learned how to use different types of values—numbers, strings, and images—and how to write expressions to manipulate them.
 
-**بالعربي:**
 في الدروس السابقة تعلمنا كيفية استخدام أنواع مختلفة من القيم مثل الأرقام والسلاسل النصية والصور، وكيفية كتابة تعبيرات لمعالجتها.
 
 ---
@@ -459,7 +458,6 @@ In previous lessons, we learned how to use different types of values—numbers, 
 
 Constants give names to values, making code easier to read and change. These two features—**readability** and **changeability**—are among the most important traits of good code.
 
-**بالعربي:**
 الثوابت تمنح القيم أسماء، مما يجعل الكود أسهل في القراءة والتعديل. وهذان العاملان (قابلية القراءة وقابلية التعديل) من أهم خصائص الكود الجيد.
 
 ---
@@ -483,7 +481,6 @@ This will evaluate to:
 * Second step: `HEIGHT` → `600`
 * Final result: `(* 400 600)` → `240000`
 
-**بالعربي:**
 الثوابت لا تنتج ناتجًا مباشرة، ولكن يمكن استخدامها داخل تعبيرات.
 
 ---
